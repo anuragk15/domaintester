@@ -19,6 +19,7 @@ export default function Home(props) {
       <button onClick={()=>{
         router.push('/blog/article')
       }}>Hello</button>
+      <div>{props.host}</div>
     </div>
   )
 }
@@ -26,3 +27,11 @@ export default function Home(props) {
 /* export async function getStaticProps(context){
   return {props:context.req}
 } */
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+   console.log(req.headers.host)
+  return {
+    props: { host: req.headers.host }, // will be passed to the page component as props
+  }
+}
