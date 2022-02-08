@@ -18,7 +18,7 @@ export default function Home(props) {
      <h1>{asPath} </h1>
       <button onClick={()=>{
         router.push('/blog/article')
-      }}>Hello</button>
+      }}>Host is {props.host}</button>
       <div>{props.host}</div>
     </div>
   )
