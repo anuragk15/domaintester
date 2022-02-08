@@ -20,7 +20,7 @@ export default function Home(props) {
      <h1>{locations}</h1> 
      <h1>{asPath} </h1>
       <button onClick={()=>{
-        router.push('/blog/article')
+        router.push('/blog/')
       }}>Hello</button>
     </div>
   )
